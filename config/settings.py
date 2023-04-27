@@ -80,13 +80,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript)
 STATIC_URL = 'static/'
-# STATIC_ROOT = 'static/'
-if DEBUG:
-    STATICFILES_DIRS = [
-        BASE_DIR / 'static'
-    ]
-else:
-    STATIC_ROOT = 'static/'
+STATIC_ROOT = 'static/'
+# if DEBUG:
+#     STATICFILES_DIRS = [
+#         BASE_DIR / 'static'
+#     ]
+# else:
+#     STATIC_ROOT = 'static/'
 # Media files (Image, Video)
 MEDIA_ROOT = 'media/'
 MEDIA_URL = 'media/'
