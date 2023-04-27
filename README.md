@@ -1,10 +1,34 @@
-# Django CRM app for Hotel
+# Django CRM Hostel
 
-### RU🇷🇺:
-CRM (от англ. Customer Relationship Management) - это система управления взаимоотношениями с клиентами. Она позволяет автоматизировать и улучшить работу с клиентами, собирать и анализировать данные о них, повышать уровень продаж и улучшать обслуживание клиентов.
+## Login
 
-### UZ🇺🇿:
-CRM (Ingliz tilidan: Customer Relationship Management) - bu mijozlar bilan muloqotlarni boshqarish tizimi. Bu mijozlar bilan ishlashni avtomatlashtirish, ular haqida ma'lumotlarni yig'ish va tahlil qilish, sotish darajalarini oshirish va mijozlarga xizmat ko'rsatishni yaxshilashga yordam beradi.
+![](/home/saydullo/Desktop/django-crm-hotel/image/login.png)
 
-### ENG🇬🇧:
-CRM (short for Customer Relationship Management) is a system for managing customer interactions. It allows businesses to automate and improve their customer interactions, gather and analyze customer data, increase sales effectiveness, and enhance customer service.
+## Register
+
+![](/home/saydullo/Desktop/django-crm-hotel/image/register.png)
+
+## Profile
+
+![](/home/saydullo/Desktop/django-crm-hotel/image/profile.png)
+
+## Change Profile
+
+![](/home/saydullo/Desktop/django-crm-hotel/image/chnage_profile.png)
+
+## Meni For Users
+
+![](/home/saydullo/Desktop/django-crm-hotel/image/menu.png)
+
+## Menu For Staffs
+
+![](/home/saydullo/Desktop/django-crm-hotel/image/adminmenu.png)
+
+## List Client
+
+![](/home/saydullo/Desktop/django-crm-hotel/image/clients.png)
+
+
+## Add Client
+
+![](/home/saydullo/Desktop/django-crm-hotel/image/add_client.png)
