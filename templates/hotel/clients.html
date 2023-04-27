@@ -1,4 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
     Clients
+{% endblock %}
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <link rel="stylesheet" href="{% static 'css/clients.css' %}" type="text/css">
+    <div class="container">
+        {% for client in clients %}
+            <div class="card">
+                <img src="{{ client.image.url }}" alt="Client Image">
+                <div class="card-details">
+                    <h2>{{ client.first_name }} {{ client.last_name }}</h2>
+                    <p><strong>Birth Date:</strong> {{ client.dob }}</p>
+                    <a href="{% url 'clients_detail' client.id %}" class="btn-more-info">More Information</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}

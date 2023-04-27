@@ -1,4 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
     {{ client.first_name }} {{ client.last_name }}
+{% endblock %}
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <link rel="stylesheet" href="{% static 'css/clients_detail.css' %}">
+    <div class="container">
+        <div class="card">
+            <img src="{{ client.image.url }}" alt="Client Image">
+            <div class="card-details">
+                <h2>{{ client.first_name }} {{ client.last_name }}</h2>
+                <p><strong>Birth Date:</strong> {{ client.dob }}</p>
+                <p><strong>Age:</strong> {{ client.age }}</p>
+                <p><strong>Passport:</strong> {{ client.passport_serial }}</p>
+                <p><strong>Country:</strong> {{ client.country }}</p>
+                <p><strong>Region:</strong> {{ client.region }}</p>
+                <p><strong>Address:</strong> {{ client.address }}</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

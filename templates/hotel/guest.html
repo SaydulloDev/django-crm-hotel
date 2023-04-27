@@ -1,4 +1,33 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
     Guest
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/guest.css' %}">
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <h1 class="text-center">Guest List</h1>
+        <hr>
+        <div class="row">
+            {% for guest in guests %}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ guest.client_info.image.url }}" alt="Client Image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ guest.client_info.first_name }} {{ guest.client_info.last_name }}</h5>
+                            <p class="card-text">
+                                <strong>Room Number:</strong> {{ guest.room_info.room_number }}<br>
+                                <strong>Service:</strong> {{ guest.services.name }}<br>
+                                <strong>Total Price:</strong> {{ guest.room_info.price }}
+                            </p>
+                            <a href="{% url 'guest_detail' guest.id %}" class="btn btn-primary">More Information</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

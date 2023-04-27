@@ -42,6 +42,7 @@ class ServiceDetail(DetailView):
 class Clients(ListView):
     queryset = Client.objects.all()
     template_name = 'hotel/clients.html'
+    context_object_name = 'clients'
 
 
 class ClientsDetails(DetailView):
