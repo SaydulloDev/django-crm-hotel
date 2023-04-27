@@ -6,7 +6,7 @@ SECRET_KEY = 'django-insecure-*!$q3a!s362r_d!uo=-z-=jzc^u6%66--5+hbgwg_jz=mlc@2+
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -80,12 +80,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript)
 STATIC_URL = 'static/'
-if DEBUG:
-    STATICFILES_DIRS = [
-        BASE_DIR / 'static'
-    ]
-else:
-    STATIC_ROOT = 'static/'
+STATIC_ROOT = 'static/'
+# if DEBUG:
+#     STATICFILES_DIRS = [
+#         BASE_DIR / 'static'
+#     ]
+# else:
+#     STATIC_ROOT = 'static/'
 # Media files (Image, Video)
 MEDIA_ROOT = 'media/'
 MEDIA_URL = 'media/'
