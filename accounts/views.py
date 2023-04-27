@@ -43,6 +43,8 @@ def register_user(request):
         password2 = request.POST.get('password2')
         if User.objects.filter(username=username).exists():
             messages.error(request, 'User already registered')
+            return redirect('register')
+
         if password1 != password2:
             messages.error(request, 'Passwords do not match')
         else:
