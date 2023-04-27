@@ -1,5 +1,5 @@
 # Django CRM Hostel
-SITE saydullo1.pythonanywhere.com
+SITE https://saydullo1.pythonanywhere.com
 ## Login
 
 ![](image/login.png)
