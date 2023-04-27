@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Login
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" type="text/css">
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <h2>Login</h2>
+        <label for="username">username:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <input type="submit" value="Login">
+        {% if messages %}
+            <br>
+            <br>
+            <div class="error-message">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <a href="#" class="link">Forgot your password?</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Profile
+{% endblock %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}" type="text/css">
+
+
+
+
+
+    <div class="profile-container">
+        <h1>Профиль пользователя</h1>
+        <table>
+            <tr>
+                <td>Имя:</td>
+                <td>{{ user.first_name }}</td>
+            </tr>
+            <tr>
+                <td>Фамилия:</td>
+                <td>{{ user.last_name }}</td>
+            </tr>
+            <tr>
+                <td>Имя пользователя:</td>
+                <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </table>
+        <a href="{% url 'edit' %}" class="btn-change">Change</a>
+    </div>
+{% endblock %}
+
+
+
